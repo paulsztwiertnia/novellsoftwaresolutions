@@ -1,0 +1,296 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --header-height: 5.5rem;
+  --page-padding-top: calc(var(--header-height) * 1.25);
+
+  --breakpoint-3xl: 112.5rem;
+  --breakpoint-4xl: 120rem;
+
+  --theme-color-black-dark: #272727;
+  --theme-color-black: #4c4644;
+  --theme-color-gray: #e9e9e9;
+  --theme-color-white: #ffffff;
+  --theme-color-red: #D9423A;
+
+  --font-sans: var(--font-montserrat);
+  --font-display: var(--font-michroma);
+  --font-poppins: var(--font-poppins);
+  --font-inter: var(--font-inter);
+  --font-alike-angular: var(--font-alike-angular);
+
+  --color-brand: #4f80ff;
+  --color-brand-deep: #2887b5;
+  --color-ink: #343f5a;
+  --color-muted: #777777;
+  --color-line: #e6e8ee;
+  --color-surface: #f9fbfd;
+  --color-hero: #ededed;
+
+  --animate-cell-ripple: cell-ripple var(--duration, 200ms) ease-out none 1 var(--delay, 0ms);
+
+  @keyframes cell-ripple {
+    0% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.4; }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #fff;
+    color: var(--color-ink);
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  ::selection {
+    background: #d6e2ff;
+  }
+
+  :root {
+    --color-black: var(--theme-color-black);
+    --color-white: var(--theme-color-white);
+    --color-gray: var(--theme-color-gray);
+    --color-text: var(--theme-color-black);
+    --color-text-highlight: var(--theme-color-red);
+    --color-text-reverse: var(--theme-color-white);
+    --color-background-dark: var(--theme-color-black-dark);
+    --color-background-mid: var(--theme-color-gray);
+    --color-background-light: var(--theme-color-white);
+    --color-foreground: #ffffff;
+    --color-link-hover: var(--theme-color-red);
+    --color-button-hover-dark: var(--theme-color-black);
+    --color-button-hover-light: var(--theme-color-white);
+    --divider-color: theme(colors.gray.300);
+    --divider-width: 1px;
+    --color-device-frame: var(--theme-color-black);
+    --color-play-button: var(--theme-color-red);
+  }
+
+  html {
+    font-size: clamp(16px, 0.75vw + 5px, 18px);
+  }
+
+  * {
+    caret-color: transparent;
+  }
+
+  form input, form textarea {
+    caret-color: #000 !important;
+  }
+
+  .container {
+    width: calc(100% - 3rem);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1600px;
+  }
+
+  .nav-item:nth-last-of-type(2) {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-text);
+    color: white;
+    padding: 0 1.5em;
+  }
+
+  .nav-item:nth-last-of-type(2) a.group:hover span.relative > span:last-child {
+    width: 0 !important;
+    max-width: 0 !important;
+    transition: none !important;
+    background: transparent !important;
+  }
+
+  .nav-item:nth-last-of-type(2):before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-link-hover);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 0;
+  }
+
+  .nav-item:nth-last-of-type(2):hover::before {
+    transform: scaleX(1);
+  }
+
+  article + article {
+    border-top: 1px solid #d0d0d0;
+  }
+
+  h1, h2, h3, h4 {
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    margin: 1.75rem 0 1.5rem 0;
+    font-size: 2.5rem;
+    font-weight: normal;
+    line-height: 1.1em;
+  }
+
+  h2 {
+    margin: 1.75rem 0 1.5rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.1em;
+  }
+
+  h3 {
+    margin: 1.75rem 0 1rem 0;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 1.3em;
+  }
+
+  h4 {
+    margin: 1.75rem 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 1rem 0;
+    line-height: 1.3em !important;
+  }
+
+  ul { list-style: disc; padding-left: 1.5rem; }
+  ol { list-style: decimal; padding-left: 1.5rem; }
+
+  dl { margin: 1rem 0; }
+  dt {
+    margin-top: 1rem;
+    position: relative;
+    padding-left: 1rem;
+  }
+  dt::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+  }
+  dd { margin-left: 1rem; }
+
+  hr {
+    margin: 1rem 0;
+    color: gray;
+  }
+
+  blockquote {
+    margin: 1em;
+    font-size: 1.5rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1rem 0;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+
+  th, td {
+    border: 1px solid #d0d0d0;
+    padding: 0.6rem 0.75rem;
+    vertical-align: top;
+    text-align: left;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  thead th {
+    background: #f5f5f5;
+    font-weight: 700;
+  }
+
+  tbody th[scope="row"] { font-weight: 600; }
+
+  tfoot th, tfoot td {
+    background: #fafafa;
+    font-weight: 700;
+  }
+
+  tbody tr:hover { background: #f0f7ff; }
+
+  figcaption { font-size: 1em; }
+
+  label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  label[aria-required="true"]::after {
+    content: " --*";
+    color: var(--color-brand);
+  }
+
+  form input,
+  form textarea,
+  form select {
+    width: 100%;
+    border: 1px solid #000;
+    padding: 0.5rem 0.75rem;
+    background: #fff;
+    color: #000;
+  }
+
+  form input::placeholder,
+  form textarea::placeholder {
+    color: #4b5563;
+  }
+
+  form input:focus,
+  form textarea:focus,
+  form select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.3);
+  }
+
+  form input:disabled,
+  form textarea:disabled,
+  form select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background: #f3f4f6;
+  }
+
+  form textarea { min-height: 8rem; }
+
+  form fieldset { margin-top: 1.5rem; font-weight: 700; }
+  form fieldset > * + * { margin-top: 1.5rem; }
+
+  .page-header { margin-bottom: 2em; }
+
+  .section-subtitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    width: 75%;
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: -0.05em;
+    line-height: 1em;
+    word-spacing: -0.035em;
+  }
+
+  .divider-top { border-top: var(--divider-width) solid var(--divider-color); }
+  .divider-bottom { border-bottom: var(--divider-width) solid var(--divider-color); }
+  .divider-y {
+    border-top: var(--divider-width) solid var(--divider-color);
+    border-bottom: var(--divider-width) solid var(--divider-color);
+  }
+
+  .richtext h2 { font-size: 3rem; }
+}
