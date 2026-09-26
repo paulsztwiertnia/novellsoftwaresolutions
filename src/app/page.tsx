@@ -12,25 +12,25 @@ const offers = [
   {
     title: "Website & App Development",
     body: "Transform Your Vision into Reality with Expert Website and App Development With user-friendly, responsive websites and dynamic apps to drive your business forward.",
-    image: upload("2023/04/pic-6.png"),
+    image: upload("pic-6.png"),
     href: "/website-and-app-development",
   },
   {
     title: "Digital Marketing",
     body: "Amplify Your Brand's Reach, Engagement, and Conversions. Elevate your online presence through tailored digital marketing strategies for superior results.",
-    image: upload("2023/04/pic-8.png"),
+    image: upload("pic-8.png"),
     href: "/digital-marketing",
   },
   {
     title: "Search Engine Optimization",
     body: "Boost Your Businesses Visibility, Rank Higher, and Attract Organic Traffic. Harness the power of SEO to rise in search rankings and reach your target audience.",
-    image: upload("2023/04/pic-9.png"),
+    image: upload("pic-9.png"),
     href: "/search-engine-optimization",
   },
   {
     title: "Hosting & Domain Services",
     body: "Our hosting and domain services go beyond reliability; they offer peace of mind. We ensure your website remains accessible, secure, and responsive, so you can focus growing your online footprint and engaging your audience.",
-    image: upload("2023/04/pic-7.png"),
+    image: upload("pic-7.png"),
     href: "/hosting-and-domain-services",
   },
 ];
@@ -39,29 +39,28 @@ const solutions = [
   {
     title: "Web & Front End Applications",
     body: "We specialize in crafting responsive web applications tailored to tackle your intricate business challenges. Our proficient teams are well-versed in modern frameworks, guaranteeing seamless experiences across various devices and smooth integration with backend data sources.",
-    image: upload("2023/10/Screenshot-2023-10-13-at-1.19.13-PM.png"),
+    image: upload("Screenshot-2023-10-13-at-1.19.13-PM.png"),
   },
   {
     title: "Databases",
     body: "Elevate your data management with cutting-edge database solutions for streamlined and secure operations. Our database services ensure efficient and secure data management, empowering your business growth and success.",
-    image: upload("2023/10/database-icon-vector-5053735-removebg-preview-1-1.png"),
+    image: upload("database-icon-vector-5053735-removebg-preview-1-1.png"),
   },
   {
     title: "Machine Learning",
     body: 'By using machine learning technology, businesses are enabled to construct automated models adept at swiftly processing extensive datasets. These models dynamically "learn" how to effectively apply data-driven insights to overcome complex challenges, thereby enhancing operational efficiency and facilitating informed decision-making.',
-    image: upload("2023/10/machine-learning-icon-free-vector-removebg-preview-2.png"),
+    image: upload("machine-learning-icon-free-vector-removebg-preview-2.png"),
   },
   {
     title: "Ecommerce Applications",
     body: "From customized implementations to seamless system integration and continuous support, our expert teams ensure the delivery of a dynamic and robust content ecosystem that scales effortlessly.",
-    image: upload("2023/04/pic-35.png"),
+    image: upload("pic-35.png"),
   },
 ];
 
 const stats = [
-  { value: "5,000,000+", label: "Users" },
+  { value: "1,000,000+", label: "Users" },
   { value: "100%", label: "Positive Feedback" },
-  { value: "$100k+", label: "In Sales" },
 ];
 
 export default function Home() {
@@ -69,7 +68,7 @@ export default function Home() {
     <main>
       <section
         className="bg-hero bg-cover bg-center"
-        style={{ backgroundImage: `url(${upload("2024/06/Home-3-scaled-2-2.png")})` }}
+        style={{ backgroundImage: `url(${upload("Home-3-scaled-2-2.png")})` }}
       >
         <div className="mx-auto grid min-h-[640px] max-w-6xl items-center px-5 py-20 md:grid-cols-2 md:px-8">
           <div>
@@ -119,7 +118,7 @@ export default function Home() {
             </div>
           </div>
           <img
-            src={upload("2023/04/pic-21.jpg")}
+            src={upload("pic-21.jpg")}
             alt="AI powered illustration"
             className="w-full rounded-md object-cover"
           />
@@ -143,7 +142,7 @@ export default function Home() {
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 md:grid-cols-2 md:px-8 md:py-20">
           <img
-            src={upload("2023/04/pic-19.jpg")}
+            src={upload("pic-19.jpg")}
             alt="Innovative databases and computer servers"
             className="w-full rounded-md object-cover"
           />
@@ -171,7 +170,7 @@ export default function Home() {
 
       <section
         className="bg-cover bg-center"
-        style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url(${upload("2023/04/map.jpg")})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)), url(${upload("map.jpg")})` }}
       >
         <div className="mx-auto max-w-6xl px-5 py-16 text-center md:px-8 md:py-20">
           <Eyebrow>Worldwide Experience</Eyebrow>
@@ -179,7 +178,7 @@ export default function Home() {
           <p className="mx-auto mt-4 max-w-xl text-[17px] text-muted">
             Explore why people choose Novell Software Solutions for their next project
           </p>
-          <dl className="mt-12 grid gap-10 sm:grid-cols-3">
+          <dl className="mx-auto mt-12 grid max-w-3xl gap-10 sm:grid-cols-2 [&_dd]:ml-0 [&_dt]:pl-0 [&_dt]:before:content-none">
             {stats.map((stat) => (
               <div key={stat.label}>
                 <dt className="font-poppins text-lg text-ink">{stat.label}</dt>

@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   description:
     "We are a digital agency that offers design, marketing strategy, and software solutions to businesses and individuals.",
   icons: {
-    icon: upload("2023/11/cropped-favicon-1-32x32.png"),
-    apple: upload("2023/11/cropped-favicon-1-180x180.png"),
+    icon: upload("cropped-favicon-1-32x32.png"),
+    apple: upload("cropped-favicon-1-180x180.png"),
   },
 };
 

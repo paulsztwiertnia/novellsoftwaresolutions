@@ -12,17 +12,17 @@ const benefits = [
   {
     title: "Enhanced Visibility, Increased Traffic",
     body: "Gain a prominent online presence and attract a larger audience with our SEO strategies, ensuring that your website is easily discoverable and drives a steady stream of interested visitors to your pages.",
-    image: upload("2023/11/seo-2.png"),
+    image: upload("seo-2.png"),
   },
   {
     title: "Data-Driven Results",
     body: "Leverage the power of data-driven insights to achieve optimal SEO outcomes, allowing you to make informed decisions and implement tailored strategies that effectively boost your website’s visibility and organic traffic.",
-    image: upload("2023/11/big-data.png"),
+    image: upload("big-data.png"),
   },
   {
     title: "Competitive Rates",
     body: "Gain a competitive advantage with our cost-effective SEO solutions, enabling you to achieve high visibility and increased traffic at competitive rates, ensuring maximum return on your investment.",
-    image: upload("2023/11/seo-4.png"),
+    image: upload("seo-4.png"),
   },
 ];
 
@@ -48,7 +48,7 @@ export default function SeoPage() {
         title="Search Engine Optimization"
         headline="Maximize Your Business's Rankings with Our SEO solutions"
         body="Maximize Your Online Visibility and Reach with Tailored Search Engine Optimization Strategies to Drive Growth and Boost Your Digital Presence."
-        image={upload("2023/04/pic-35.png")}
+        image={upload("pic-35.png")}
         imageAlt="Ecommerce and phone data illustration"
       />
 
@@ -62,7 +62,7 @@ export default function SeoPage() {
 
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-8">
-          <img src={upload("2023/10/computer-vector.png")} alt="Computer with statistics" className="w-full" />
+          <img src={upload("computer-vector.png")} alt="Computer with statistics" className="w-full" />
           <div>
             <h2 className="font-display text-2xl leading-snug text-ink md:text-3xl">
               Increase Your Search Engine Ranking With Our Innovative SEO Solutions Using Artificial Intelligence and

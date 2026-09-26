@@ -12,22 +12,22 @@ const benefits = [
   {
     title: "Precise Ad Targeting",
     body: "Advertising on Facebook and Google allows precise targeting based on age, interests, behavior, and location. Utilize Pay-Per-Click advertising to effectively engage your specific customer base.",
-    image: upload("2023/11/marketing-1.png"),
+    image: upload("marketing-1.png"),
   },
   {
     title: "Advanced Ad Analysis",
     body: "Stay informed about your generated impressions, clicks, and conversions. Additionally, benefit from split testing analytics such as landing page heat maps and targeting tests.",
-    image: upload("2023/11/marketing-2.png"),
+    image: upload("marketing-2.png"),
   },
   {
     title: "Enhanced Brand Recognition",
     body: "Building your brand establishes a strong connection with your target audience, fostering trust and credibility. With a recognizable brand, customers feel more assured and are inclined to choose your products or services, establishing long-term loyalty and ensuring a competitive edge in the market.",
-    image: upload("2023/11/marketing-4.png"),
+    image: upload("marketing-4.png"),
   },
   {
     title: "Affordable & Measurable Ads",
     body: "While running paid advertising campaigns, you can precisely target your desired audience. The costs associated with these ads vary depending on the specific objective or ad type in use. We utilize machine learning algorithms to deliver the best-performing ads for your campaign.",
-    image: upload("2023/11/marketing-3.png"),
+    image: upload("marketing-3.png"),
   },
 ];
 
@@ -57,7 +57,7 @@ export default function DigitalMarketingPage() {
         title="Digital Marketing"
         headline="Revolutionize Your Digital Presence with Our Pay-Per-Click Advertising"
         body="Experience Seamless Integration and Enhanced Digital Marketing Strategies for Business Growth with Our Facebook & Google Ads"
-        image={upload("2023/04/Illustration-2.jpg")}
+        image={upload("Illustration-2.jpg")}
         imageAlt="Digital marketing illustration"
       />
 
@@ -72,7 +72,7 @@ export default function DigitalMarketingPage() {
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-8">
           <img
-            src={upload("2023/04/pic-19.jpg")}
+            src={upload("pic-19.jpg")}
             alt="Innovative databases and computer servers"
             className="w-full rounded-md object-cover"
           />

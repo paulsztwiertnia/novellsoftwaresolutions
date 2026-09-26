@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { services, upload } from "@/lib/site";
 
-const logo = upload("2023/10/novell-logo-horizontal-e1696363534483.png");
+const logo = upload("novell-logo-horizontal-e1696363534483.png");
 
 function itemClass(active: boolean) {
   return `font-display text-[13px] tracking-wide transition-colors ${

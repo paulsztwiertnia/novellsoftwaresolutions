@@ -23,6 +23,6 @@ export const services = [
   },
 ] as const;
 
-export function upload(path: string) {
-  return `/uploads/${path.split("/").map(encodeURIComponent).join("/")}`;
+export function upload(filename: string) {
+  return `/uploads/${encodeURIComponent(filename)}`;
 }

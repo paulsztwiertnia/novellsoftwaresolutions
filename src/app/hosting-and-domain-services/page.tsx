@@ -100,7 +100,7 @@ export default function HostingPage() {
         title="Hosting & Domain Solutions"
         headline="Expert Digital Hosting & Domain Solutions with Reasonable Prices"
         body="Our hosting & domain service includes 24/7 proactive hardware and software monitoring, daily backups, and 99.9% guaranteed up-time. Our service differs from other companies by means of optimized performance analysis. We fine-tune your account to ensure your website is fast and reliable."
-        image={upload("2023/04/pic-35.png")}
+        image={upload("pic-35.png")}
         imageAlt="Hosting illustration"
       />
 
@@ -134,7 +134,7 @@ export default function HostingPage() {
 
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-8">
-          <img src={upload("2023/11/hosting-2.png")} alt="" className="w-full" />
+          <img src={upload("hosting-2.png")} alt="" className="w-full" />
           <div>
             <h2 className="font-display text-2xl leading-snug text-ink md:text-3xl">
               Experience the Benefits of Fast Loading Speeds with Our Hosting Solutions for Enhanced User Experience!

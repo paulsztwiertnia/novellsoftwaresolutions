@@ -12,22 +12,22 @@ const capabilities = [
   {
     title: "Expert User Experience (UX) and User Interface (UI) Design",
     body: "Turn your vision into reality through our expert website and app development services. Our user-friendly, responsive websites and dynamic apps are designed to propel your business towards greater success and growth.",
-    image: upload("2023/10/vector6.png"),
+    image: upload("vector6.png"),
   },
   {
     title: "User Testing & Rapid Prototyping",
     body: "We establish clear usability targets, ensuring that the solutions we validate align closely with your project objectives. Throughout the developmental journey, we construct interactive prototypes to validate concepts and streamline user experiences, ensuring optimal functionality and engagement.",
-    image: upload("2023/10/vector5.png"),
+    image: upload("vector5.png"),
   },
   {
     title: "Search Engine Optimization",
     body: "An SEO-friendly website enhances online visibility, driving increased organic traffic and improving search engine rankings. It ensures better user experience, higher credibility, and a competitive edge, ultimately leading to improved brand recognition and higher conversion rates.",
-    image: upload("2023/10/vector3.png"),
+    image: upload("vector3.png"),
   },
   {
     title: "Mobile Device Responsiveness",
     body: "Easily accessible anytime, anywhere. Impress your audience with our website responsiveness. Enjoy optimal user experience across all devices, elevating engagement, and ensuring your content is always accessible.",
-    image: upload("2023/10/vector4.png"),
+    image: upload("vector4.png"),
   },
 ];
 
@@ -57,7 +57,7 @@ export default function WebAppDevelopmentPage() {
         title="Website and App Development"
         headline="Revolutionizing Your Business Through Cutting-Edge Software Solutions"
         body="Transform Your Vision Into Reality With Expert Website And App Development. User-Friendly, Responsive Websites And Dynamic Apps To Drive Your Business Forward."
-        image={upload("2023/04/pic-20.jpg")}
+        image={upload("pic-20.jpg")}
         imageAlt="Mobile app development"
       />
 
@@ -71,7 +71,7 @@ export default function WebAppDevelopmentPage() {
 
       <section className="bg-surface">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-8">
-          <img src={upload("2023/10/computer-vector.png")} alt="Computer with statistics" className="w-full" />
+          <img src={upload("computer-vector.png")} alt="Computer with statistics" className="w-full" />
           <div>
             <h2 className="font-display text-2xl leading-snug text-ink md:text-3xl">
               Increase Your Brand Recognition with Our Expert Website and App Development Services
@@ -87,7 +87,7 @@ export default function WebAppDevelopmentPage() {
         <div className="mx-auto max-w-6xl px-5 py-16 md:px-8">
           <SectionTitle>Our Development Lifecycle</SectionTitle>
           <p className="mt-3 font-display text-xl text-ink">Get a finished product in as little as 1 week!</p>
-          <ol className="mt-10 grid gap-6 md:grid-cols-2">
+          <ol className="mt-10 grid list-none gap-6 pl-0 md:grid-cols-2">
             {steps.map((step) => (
               <li key={step.title} className="rounded-md border border-line bg-surface p-6">
                 <h3 className="font-display text-lg text-ink">{step.title}</h3>
