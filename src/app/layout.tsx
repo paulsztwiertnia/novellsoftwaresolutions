@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Michroma, Montserrat, Poppins } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
-import { upload } from "@/lib/site";
+import { siteUrl, upload } from "@/lib/site";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -23,6 +23,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Home - Novell Software Solutions",
     template: "%s - Novell Software Solutions",
