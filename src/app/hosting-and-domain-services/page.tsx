@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const plans = [
   {
     name: "Starter Plan",
-    price: "$599",
+    price: "$240",
     features: [
       "Unlimited Bandwidth",
       "Unlimited Free SSL",
@@ -30,7 +30,7 @@ const plans = [
   },
   {
     name: "Premium Plan",
-    price: "$849",
+    price: "$600",
     features: [
       "Unlimited Bandwidth",
       "Unlimited Free SSL",
@@ -51,7 +51,7 @@ const plans = [
   },
   {
     name: "Enterprise Plan",
-    price: "$1,299",
+    price: "$1,200",
     features: [
       "Dedicated IP Address",
       "Unlimited Bandwidth",
