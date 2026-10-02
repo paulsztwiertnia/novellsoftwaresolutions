@@ -1,5 +1,7 @@
 export const siteName = "Novell Software Solutions";
 
+export const siteUrl = "https://novellsoftwaresolutions.com";
+
 export const services = [
   {
     href: "/website-and-app-development",
