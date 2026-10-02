@@ -5,6 +5,15 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
   experimental: {
     reactCompiler: false,
     // Framework default is 300s; controls x-nextjs-stale-time for static routes
