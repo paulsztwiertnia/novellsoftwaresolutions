@@ -31,11 +31,18 @@ export function SiteFooter() {
         </div>
         <div>
           <h2 className="m-0 text-center font-display text-xs font-light tracking-wide">Company</h2>
-          <p className="mb-0 mt-4 text-center text-[11px]">
-            <Link href="/contact" className="hover:text-brand">
-              Contact Us
-            </Link>
-          </p>
+          <ul className="mt-4 list-none space-y-2 pl-0 text-center text-[11px]">
+            <li>
+              <Link href="/projects" className="hover:text-brand">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-brand">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
