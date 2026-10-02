@@ -95,6 +95,13 @@ export function SiteHeader() {
             </div>
           </div>
           <Link
+            href="/projects"
+            className={itemClass(pathname === "/projects")}
+            aria-current={pathname === "/projects" ? "page" : undefined}
+          >
+            Projects
+          </Link>
+          <Link
             href="/contact"
             className={itemClass(pathname === "/contact")}
             aria-current={pathname === "/contact" ? "page" : undefined}
@@ -141,6 +148,11 @@ export function SiteHeader() {
                   </li>
                 ))}
               </ul>
+            </li>
+            <li>
+              <Link href="/projects" className={itemClass(pathname === "/projects")} onClick={() => setOpen(false)}>
+                Projects
+              </Link>
             </li>
             <li>
               <Link href="/contact" className={itemClass(pathname === "/contact")} onClick={() => setOpen(false)}>
