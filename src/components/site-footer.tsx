@@ -17,9 +17,9 @@ export function SiteFooter() {
             </p>
           </div>
         </div>
-        <div>
-          <h2 className="m-0 text-center font-display text-xs font-light tracking-wide">Services</h2>
-          <ul className="mt-4 list-none space-y-2 pl-0 text-center text-[11px]">
+        <div className="text-left md:text-center">
+          <h2 className="m-0 font-display text-xs font-light tracking-wide">Services</h2>
+          <ul className="mt-4 list-none space-y-2 pl-0 text-[11px]">
             {services.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="hover:text-brand">
@@ -30,8 +30,8 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <h2 className="m-0 text-center font-display text-xs font-light tracking-wide">Company</h2>
-          <ul className="mt-4 list-none space-y-2 pl-0 text-center text-[11px]">
+          <h2 className="m-0 text-left md:text-center font-display text-xs font-light tracking-wide">Company</h2>
+          <ul className="mt-4 list-none space-y-2 pl-0 text-left md:text-center text-[11px]">
             <li>
               <Link href="/projects" className="hover:text-brand">
                 Projects

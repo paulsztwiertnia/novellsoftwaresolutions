@@ -32,6 +32,7 @@ export function SiteHeader() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [servicesHover, setServicesHover] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
+  const mobileServicesRef = useRef<HTMLLIElement>(null);
   const servicesActive = services.some((item) => pathname === item.href);
   const servicesShown = servicesOpen || servicesHover;
 
@@ -43,7 +44,9 @@ export function SiteHeader() {
 
   useEffect(() => {
     function onPointerDown(event: PointerEvent) {
-      if (!servicesRef.current?.contains(event.target as Node)) setServicesOpen(false);
+      const target = event.target as Node;
+      if (servicesRef.current?.contains(target) || mobileServicesRef.current?.contains(target)) return;
+      setServicesOpen(false);
     }
     document.addEventListener("pointerdown", onPointerDown);
     return () => document.removeEventListener("pointerdown", onPointerDown);
@@ -129,7 +132,7 @@ export function SiteHeader() {
                 Home
               </Link>
             </li>
-            <li>
+            <li ref={mobileServicesRef}>
               <button
                 type="button"
                 className="inline-flex items-center gap-2 font-display text-[13px] text-black"
